@@ -6,9 +6,13 @@ Token: 8570336443:AAHsP12yYw3ZfwKTQLZeV_diU3kKQoXA_aM
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, MessageHandler, ContextTypes, filters
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Bot token
-TOKEN = "8570336443:AAHsP12yYw3ZfwKTQLZeV_diU3kKQoXA_aM"
+TOKEN = os.getenv("BOT_TOKEN", "8570336443:AAHsP12yYw3ZfwKTQLZeV_diU3kKQoXA_aM")
 
 # Message text
 MESSAGE_TEXT = "Yangi yalang'och Tik Tok ilovasi! Tik Tok 18+ uchun yangi ilovani chiqardi!"
